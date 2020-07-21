@@ -336,7 +336,7 @@ testComponent_testing_value{project="p1",revision="r2"} 1
 			UnregisterResourceView(gaugeView, resourceCounter)
 			FlushExporter()
 
-			time.Sleep(1 * time.Millisecond)
+			time.Sleep(20 * time.Millisecond)
 			ocFake.srv.Stop() // Force close connections
 			ocFake.srv.GracefulStop()
 			records := []metricExtract{}
